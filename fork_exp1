@@ -1,0 +1,23 @@
+pipeline {
+	agent any
+		stages {
+			stage ('Build') {
+				steps {
+						sh 'echo this is my pipeline script'
+						sh 'ls '
+						}
+					}
+			stage ('TEST') {
+					steps {
+							sh 'echo this is for test'
+							sh 'ls -lrt'
+							}
+						}
+			stage ('DEPLOY') {
+					steps {
+							sh 'du -h'
+							sh 'echo this is for build'
+							}
+						}
+				}
+		}
